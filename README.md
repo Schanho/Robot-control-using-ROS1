@@ -21,6 +21,8 @@ Ubuntu 20.04와 ROS Noetic 기반의 로봇 제어용 ROS1 프로젝트입니다
   - [기본 ROS 패키지](http://wiki.ros.org/noetic/Installation/Ubuntu)
   - `requirements.txt`에 나열된 추가 의존 패키지
 
+---
+
 ## **📜 프로젝트 배경**
 ### 필요성
 - **학교 내 안전과 효율적인 물품 전달**  
@@ -59,18 +61,21 @@ Ubuntu 20.04와 ROS Noetic 기반의 로봇 제어용 ROS1 프로젝트입니다
 
 ---
 
+## **📌 TurtleBot3 패키지 사용 안내**
+
+본 프로젝트에서는 로봇 제어에 Robotis에서 제공하는 [TurtleBot3 패키지](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)를 기반으로 구축되었습니다. 패키지의 용량이 큰 관계로, 모든 파일을 포함하지 않고 주요 스크립트와 설정 파일만 업로드되었습니다.  
+자세한 사용법 및 설치 방법은 Robotis 공식 매뉴얼을 참조하시기 바랍니다.
+
+---
+
 ## **🧩 코드 구성**
 1. **임베디드 시스템 - 로봇 제어**  
    - Jetson Orin Nano와 OpenCR을 활용하여 로봇의 이동 및 제어를 수행합니다.
    - Dynamixel 모터와 LiDAR 센서를 통합하여 자율주행 및 물체 인식을 가능하게 합니다.
   
-2. **인공지능 모델 - YOLOv8과 Grounding DINO 1.6**  
+2. **인공지능 모델 -  Grounding DINO 1.6**  
    - **YOLOv8** : 객체 탐지와 경로 예측을 위한 딥러닝 모델을 사용합니다.
    - **Grounding DINO 1.6** : 제로 샷 학습 모델을 활용하여 엘리베이터 문 상태 인식을 수행합니다.
-
-3. **백엔드 - 자바 스프링**  
-   - 로봇과의 통신을 담당하며, 어플리케이션과 연동하여 명령을 주고받는 구조로 설계되었습니다.
-   - Java Spring Framework를 이용해 안정적이고 확장 가능한 시스템을 구축했습니다.
 
 ---
 
